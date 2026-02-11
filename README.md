@@ -4,36 +4,10 @@
 
 This project demonstrates a **JSON object-driven approach** to automated testing using Playwright. This methodology eliminates code duplication and improves test scalability by centralizing test case definitions in a JSON file, allowing the test logic to dynamically adapt to different scenarios without repeating code.
 
-## What is the JSON Object-Driven Approach?
 
-### The Problem with Traditional Testing
+## Logic and how to scale the tests for the JSON-Driven Testing
 
-In traditional test automation, you often write individual test cases with repetitive code:
-
-```typescript
-// ❌ Not scalable - lots of duplication
-test('Test 1: Login and verify task in column', async ({ page }) => {
-  // Login code
-  // Navigate code
-  // Verification code
-});
-
-test('Test 2: Login and verify different task', async ({ page }) => {
-  // Login code (repeated)
-  // Navigate code (repeated)
-  // Verification code (similar but different)
-});
-
-test('Test 3: Login and verify yet another task', async ({ page }) => {
-  // Login code (repeated again)
-  // Navigate code (repeated again)
-  // Verification code (yet another variant)
-});
-```
-
-### The Solution: JSON-Driven Testing
-
-Instead, we define test cases as data in a JSON file and use a single parameterized test that adapts based on the data:
+We define test cases as data in a JSON file and use a single parameterized test that adapts based on the data:
 
 ```typescript
 // ✅ DRY Principle - Single test logic, multiple scenarios
@@ -274,14 +248,16 @@ See [playwright.config.ts](playwright.config.ts) for:
 4. **Document variations** - Comment complex test scenarios in JSON
 5. **Leverage page objects** - Keep selectors and logic in page classes, not tests
 
-## Future Enhancements
+## Future Enhancements 
 
-- Add more test cases to testCases.json
-- Create additional page objects for other workflows
-- Add test result reporting
-- Implement parallel test execution
-- Add performance benchmarking
+- Add more test cases to testCases.json  I added a negative case towards the end but can be expanded for multiple cases. For example what if we have 21 correctly identified field but the header do not math etc..
+- Create additional page objects for other workflows in addition to board. If the new page needs more items this can also be customized. 
+- Add test result reporting in addition to screenshots. The current state is headed and screenshot for all however can be changed to headless for CI and obviously less resource. 
+- Implement parallel test execution and check performance. The current state logs each iteration maybe another approach can be use of the cookies and keep the logged page ? Security of the app also needs to play the role here. Do we keep sessions or require login after each out of domain navigation ?
+
 
 ## Conclusion
 
 This JSON object-driven approach demonstrates how to build scalable, maintainable test automation with minimal code duplication. By separating test data from test logic, you can easily expand your test coverage without writing redundant code.
+
+This README.md was created with Human + AI  (*laugh)
