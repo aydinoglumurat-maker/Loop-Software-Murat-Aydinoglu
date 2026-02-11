@@ -40,12 +40,6 @@
     "task": "App icon design",
     "column": "Done",
     "tags": ["Design"]
-  },
-  {
-    "name": "Bad Feature test case",
-    "app": "Web Application",
-    "task": "Implement user authentication",
-    "column": "To Do",
-    "tags": ["Bad Feature", "High Priority"]
   }
+
 ]
