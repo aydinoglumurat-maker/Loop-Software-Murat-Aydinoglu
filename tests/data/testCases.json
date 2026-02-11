@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Web App Implement user authentication case",
+    "app": "Web Application",
+    "task": "Implement user authentication",
+    "column": "To Do",
+    "tags": ["Feature", "High Priority"]
+  },
+  {
+    "name": "Web App Fix navigation bug case",
+    "app": "Web Application",
+    "task": "Fix navigation bug",
+    "column": "To Do",
+    "tags": ["Bug"]
+  },
+  {
+    "name": "Web App Design system updates case",
+    "app": "Web Application",
+    "task": "Design system updates",
+    "column": "In Progress",
+    "tags": ["Design"]
+  },
+  {
+    "name": "Mobile AppPush notification system case",
+    "app": "Mobile Application",
+    "task": "Push notification system",
+    "column": "To Do",
+    "tags": ["Feature"]
+  },
+  {
+    "name": "Mobile App Offline mode case",
+    "app": "Mobile Application",
+    "task": "Offline mode",
+    "column": "In Progress",
+    "tags": ["Feature", "High Priority"]
+  },
+  {
+    "name": "Mobile App App icon design case",
+    "app": "Mobile Application",
+    "task": "App icon design",
+    "column": "Done",
+    "tags": ["Design"]
+  },
+  {
+    "name": "Bad Feature test case",
+    "app": "Web Application",
+    "task": "Implement user authentication",
+    "column": "To Do",
+    "tags": ["Bad Feature", "High Priority"]
+  }
+]
